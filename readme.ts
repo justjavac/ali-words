@@ -7,23 +7,23 @@ const readme = `# 互联网黑话词汇表
 
 ## 二字词汇
 
-${words.filter((x) => x.length === 2).join("、")}
+${words.filter((x) => x.length === 2).join(", ")}
 
 ## 三字词汇
 
-${words.filter((x) => x.length === 3).join("、")}
+${words.filter((x) => x.length === 3).join(", ")}
 
 ## 四字词汇
 
-${words.filter((x) => x.length === 4).join("、")}
+${words.filter((x) => x.length === 4).join(", ")}
 
 ## 五字词汇
 
-${words.filter((x) => x.length === 5).join("、")}
+${words.filter((x) => x.length === 5).join(", ")}
 
 ## 六字词汇
 
-${words.filter((x) => x.length === 6).join("、")}
+${words.filter((x) => x.length === 6).join(", ")}
 `;
 
 await Deno.writeTextFile("./README.md", readme);
