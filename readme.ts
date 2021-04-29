@@ -1,4 +1,3 @@
-// deno run --allow-write .\readme.ts
 import words from "./mod.ts";
 
 const readme = `# 互联网黑话词汇表
