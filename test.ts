@@ -1,5 +1,8 @@
-import { getRandomOne, nouns, verbs } from './src/words.ts';
+import { randomGetWord, getNouns, getVerbs, randomQZoneSentense } from './src/mod.ts';
 
-console.info('verbs:', verbs);
-console.info('nouns:', nouns);
-console.info('random one:', getRandomOne());
+console.info('verbs:', getVerbs());
+console.info('nouns:', getNouns());
+console.info('random one:', randomGetWord());
+
+const qzoneSentence = randomQZoneSentense()
+console.info(qzoneSentence);
