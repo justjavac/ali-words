@@ -4,12 +4,9 @@ import { getAllWords } from '../index.ts';
 
 /** 根据词性随机返回一个词, 并从数组中将其删掉 */
 function randomPickAndDrop(words: Word[], posStr: string): Word {
-  const posList = posStr.split(',').map((pos: any) => {
-    if (pos === 'vi') return PartOfSpeech.vi;
-    if (pos === 'vt') return PartOfSpeech.vt;
-    if (pos === 'adj') return PartOfSpeech.adj;
-    if (pos === 'n') return PartOfSpeech.n;
-  });
+  const posList: PartOfSpeech[] = posStr
+    .split(',')
+    .map((pos: any) => PartOfSpeech[pos] as any);
   const filtered = words.filter(word => word.partOfSpeech.some(pos => posList.includes(pos)))
 
   const word = randomGetItem(filtered);
