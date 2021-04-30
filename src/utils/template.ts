@@ -30,6 +30,7 @@ function generateSentence(tpl: string): string {
   const regexp = /\{([a-z,]+)\}(?=[^-]|$)/
   let allWords = getAllWords()
 
+  // 只出现一次的词汇
   while (regexp.test(res)) {
     res = res.replace(regexp, (match, p1) => {
       const word = randomPickAndDrop(allWords, p1)
@@ -37,6 +38,7 @@ function generateSentence(tpl: string): string {
     })
   }
 
+  // 带序号, 需要多次出现的词汇
   const indexedReplacements: string[] = []
 
   for (let i = 0; i < 10; i++) {
