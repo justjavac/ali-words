@@ -4,5 +4,7 @@ export {
   getVerbs,
   getNouns,
   getAdjs,
-  randomQZoneSentense,
+  randomQZoneSentence,
+  randomMarketingSentence,
+  randomSentence,
 } from './index.ts'
