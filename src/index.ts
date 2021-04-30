@@ -22,4 +22,6 @@ function randomQZoneSentense() {
   return generateSentence(tpl)
 }
 
+// TODO 接狗屁不通生成器
+
 export { randomGetWord,getAllWords, getVerbs, getNouns, getAdjs, randomQZoneSentense }

@@ -27,13 +27,9 @@ function getRandomOneFromWords(allWords: Word[], options: {
   return word.text;
 }
 
-
-
 /** 根据词性获取词 */
 function getWordsByPartOfSpeech(allWords: Word[], pos: PartOfSpeech[], fullData = false): Word[] {
   return allWords.filter(word => word.partOfSpeech.some(p => pos.includes(p)))
 }
-
-
 
 export { getRandomOneFromWords, getWordsByPartOfSpeech }
