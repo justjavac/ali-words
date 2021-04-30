@@ -34,14 +34,14 @@ all in, 不跟风要造风, 多维矩阵闭环, 打开销售通路
 
 ## API
 
-- randomGetWord 随机获取一个词
-- getAllWords 获取所有词
-- getVerbs 获取所有动词
-- getNouns 获取所有名词
-- getAdjs 获取所有形容词
-- randomQZoneSentence 随机生成一句qq空间体的黑话
-- randomMarketingSentence 随机生产一句营销号风格的黑话
-- randomSentence 根据类型, 随机生产一种风格的黑话 目前支持 `'qzone'`和`'marketing'`
+- `randomGetWord` 随机获取一个词
+- `getAllWords` 获取所有词
+- `getVerbs` 获取所有动词
+- `getNouns` 获取所有名词
+- `getAdjs` 获取所有形容词
+- `randomQZoneSentence` 随机生成一句 qq 空间体的黑话
+- `randomMarketingSentence` 随机生产一句营销号风格的黑话
+- `randomSentence` 根据类型, 随机生产一种风格的黑话 目前支持 `'qzone'`和`'marketing'`
 
 ### 节目效果
 
