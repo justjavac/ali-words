@@ -27,7 +27,7 @@ function randomPickAndDrop(words: Word[], posStr: string): Word {
 // 根据模板, 生产句子
 function generateSentence(tpl: string): string {
   let res = tpl
-  const regexp = /\{([a-z,]+)\}(?=[^-])/
+  const regexp = /\{([a-z,]+)\}(?=[^-]|$)/
   let allWords = getAllWords()
 
   while (regexp.test(res)) {
