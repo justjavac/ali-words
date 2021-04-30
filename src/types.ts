@@ -12,6 +12,7 @@ enum PartOfSpeech {
 interface Word {
   text: string,
   partOfSpeech: PartOfSpeech[],
+  length?: number,
 }
 
 export { PartOfSpeech }

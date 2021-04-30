@@ -16,7 +16,9 @@ function getRandomOneFromWords(allWords: Word[], options: {
   }
 
   let filtered = allWords.filter(word => {
-    if (length && word.text.length !== length) return false;
+    // 英语词组单独标了长度
+    const wordLength = word.length || word.text.length
+    if (length && wordLength !== length) return false;
     if (pos.length && word.partOfSpeech.every(itemPos => !pos.includes(itemPos))) return false
     return true
   })
