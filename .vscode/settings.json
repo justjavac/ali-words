@@ -1,4 +1,6 @@
 {
   "deno.enable": true,
-  "deno.unstable": true
+  "deno.unstable": false,
+  "deno.lint": true,
+  "editor.defaultFormatter": "denoland.vscode-deno"
 }
