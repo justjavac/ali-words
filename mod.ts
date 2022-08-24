@@ -701,6 +701,7 @@ const words: string[] = [
   "不跟风要造风",
   "多维矩阵闭环",
   "打开销售通路",
+  "向下传递寒气",
 ];
 
 export default words;
