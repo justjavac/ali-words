@@ -8,7 +8,7 @@ function getRandomOneFromWords(allWords: Word[], options: {
   length?: number;
   partOfSpeech?: PartOfSpeech[] | PartOfSpeech;
 } = {}): string {
-  let { length, partOfSpeech } = options;
+  const { length, partOfSpeech } = options;
   let pos: PartOfSpeech[] = [];
   if (partOfSpeech) {
     pos = (Array.isArray(partOfSpeech)) ? partOfSpeech : [partOfSpeech];
@@ -36,7 +36,6 @@ function getRandomOneFromWords(allWords: Word[], options: {
 function getWordsByPartOfSpeech(
   allWords: Word[],
   pos: PartOfSpeech[],
-  fullData = false,
 ): Word[] {
   return allWords.filter((word) =>
     word.partOfSpeech.some((p) => pos.includes(p))

@@ -6,6 +6,7 @@ import { getAllWords } from "../index.ts";
 function randomPickAndDrop(words: Word[], posStr: string): Word {
   const posList: PartOfSpeech[] = posStr
     .split(",")
+    // deno-lint-ignore no-explicit-any
     .map((pos: any) => PartOfSpeech[pos] as any);
   const filtered = words.filter((word) =>
     word.partOfSpeech.some((pos) => posList.includes(pos))
@@ -27,11 +28,11 @@ function randomPickAndDrop(words: Word[], posStr: string): Word {
 function generateSentence(tpl: string): string {
   let res = tpl;
   const regexp = /\{([a-z,]+)\}(?=[^-]|$)/;
-  let allWords = getAllWords();
+  const allWords = getAllWords();
 
   // 只出现一次的词汇
   while (regexp.test(res)) {
-    res = res.replace(regexp, (match, p1) => {
+    res = res.replace(regexp, (_match, p1) => {
       const word = randomPickAndDrop(allWords, p1);
       return word.text;
     });
@@ -41,8 +42,8 @@ function generateSentence(tpl: string): string {
   const indexedReplacements: string[] = [];
 
   for (let i = 0; i < 10; i++) {
-    let indexedRegExp = RegExp("\{([a-z,]+)\}-" + i, "g");
-    res = res.replace(indexedRegExp, (match, p1) => {
+    const indexedRegExp = RegExp("\{([a-z,]+)\}-" + i, "g");
+    res = res.replace(indexedRegExp, (_match, p1) => {
       if (indexedReplacements[i]) return indexedReplacements[i];
 
       const word = randomPickAndDrop(allWords, p1);
