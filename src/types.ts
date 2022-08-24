@@ -10,10 +10,10 @@ enum PartOfSpeech {
 }
 
 interface Word {
-  text: string,
-  partOfSpeech: PartOfSpeech[],
-  length?: number,
+  text: string;
+  partOfSpeech: PartOfSpeech[];
+  length?: number;
 }
 
-export { PartOfSpeech }
-export type { Word }
+export { PartOfSpeech };
+export type { Word };

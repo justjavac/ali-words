@@ -13,6 +13,6 @@
       "cwd": "${fileDirname}",
       "outputCapture": "std",
       "attachSimplePort": 9229
-    },
+    }
   ]
 }

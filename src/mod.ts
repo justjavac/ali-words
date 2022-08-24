@@ -1,10 +1,10 @@
 export {
-  randomGetWord,
-  getAllWords,
-  getVerbs,
-  getNouns,
   getAdjs,
-  randomQZoneSentence,
+  getAllWords,
+  getNouns,
+  getVerbs,
+  randomGetWord,
   randomMarketingSentence,
+  randomQZoneSentence,
   randomSentence,
-} from './index.ts'
+} from "./index.ts";
